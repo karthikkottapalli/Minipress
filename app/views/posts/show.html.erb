@@ -1,2 +1,7 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<h1>More Info</h1>
+
+<p><%= @post.headline %></p>
+<p><%= @post.summary %><p>
+<%= link_to "Delete Post", post_path(@post), method: :delete %>
+
+<h2>Comments:</h2>

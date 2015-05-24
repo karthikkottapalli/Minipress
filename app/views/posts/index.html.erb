@@ -1,1 +1,12 @@
 <h1>Minipress</h1>
+
+<% @posts.each do |post| %>
+<hr>
+<p>
+  <%= post.headline %>
+</p>
+<p>
+  <%= post.summary %>
+</p>  
+<hr>
+<% end %>
