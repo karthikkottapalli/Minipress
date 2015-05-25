@@ -1,12 +1,18 @@
+<div class="container" >
+<ul class="pager">
+  <li class="next">
+        <%= link_to "New Post", new_post_path %>
+  </li>
+</ul>
 <h1>Minipress</h1>
-
-<% @posts.each do |post| %>
 <hr>
+<% @posts.each do |post| %>
 <p>
-  <%= post.headline %>
+  <h3><%= link_to post.headline, post_path(post) %></h3>
 </p>
 <p>
   <%= post.summary %>
-</p>  
+</p>
 <hr>
 <% end %>
+</div>

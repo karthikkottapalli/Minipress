@@ -1,19 +1,24 @@
-<h1>More Info</h1>
+<div class="container" >
+<h1><%= @post.headline %></h1>
 
-<p><%= @post.headline %></p>
 <p><%= @post.summary %><p>
 <%= link_to "Delete Post", post_path(@post), method: :delete %>
+<%= link_to "Main Page", posts_path %>
+
 
 <h2>Comments:</h2>
-
+<hr>
 <% @post.comments.each do |comment| %>
-  <p><%= comment.content %></p>
-  <p><%= comment.username %></p>
+  <p><b>Comment:</b>
+<%= comment.content %></p>
+  <p><b>Username:</b>
+<%= comment.username %></p>
+  <hr>
 <% end %>
 
 <%= form_for [@post, @post.comments.new] do |f| %>
   <p>
-    <%= f.label :content %>
+    <%= f.label :comment %>
   </p>
   <p>
     <%= f.text_field :content %>
@@ -26,3 +31,4 @@
   </p>
   <%= f.submit "Create Comment" %>
 <% end %>
+</div>
