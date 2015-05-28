@@ -2,6 +2,4 @@
 
 Minipress is a lightweight blogging platform for news aggregation. 
 
-This app is built to be used as a tool for teaching Ruby on Rails.
-
-Below is the homepage screenshot. You can see all the news articles.
+Anyone can add, delete articles and make comments. 
